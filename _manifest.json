@@ -1,0 +1,48 @@
+{
+  "manifest_version": 2,
+  "id": "org.mai-mai.bilibili-live-gateway",
+  "version": "0.3.0",
+  "name": "B站直播间网关",
+  "description": "把 B 站直播间接入 MaiBot：Web 端弹幕长连接入站（弹幕/礼物/上舰/SC/进场），MaiBot 决定回复后经 msg/send 发弹幕回直播间。按 @机器人名 / 关键词 / 发言热度分级触发，礼物·上舰·SC 必触发，进场等通知类事件只入库不回复。管理员命令 /bili发（直接发弹幕，单号自测）/ /bili状态。",
+  "author": {
+    "name": "orge-8",
+    "url": "https://github.com/orge-8"
+  },
+  "license": "MIT",
+  "urls": {
+    "repository": "https://github.com/orge-8/bilibili-live-gateway"
+  },
+  "host_application": {
+    "min_version": "1.2.3",
+    "max_version": "1.99.99"
+  },
+  "sdk": {
+    "min_version": "2.8.0",
+    "max_version": "2.99.99"
+  },
+  "dependencies": [
+    {
+      "type": "python_package",
+      "name": "httpx",
+      "version_spec": ">=0.27"
+    },
+    {
+      "type": "python_package",
+      "name": "websockets",
+      "version_spec": ">=12.0"
+    },
+    {
+      "type": "python_package",
+      "name": "Brotli",
+      "version_spec": ">=1.1"
+    }
+  ],
+  "capabilities": [
+    "gateway.route_message",
+    "gateway.update_state",
+    "send.text"
+  ],
+  "i18n": {
+    "default_locale": "zh-CN"
+  }
+}
